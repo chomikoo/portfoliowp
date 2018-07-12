@@ -1,0 +1,73 @@
+//////////////
+// ANIMATIONS
+/////////////
+
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, 0);
+        text-shadow: 0 0 20px #ffffff;
+    }
+    50% {
+        transform: translate(-50%, 10%);
+        text-shadow: 0 0 1px #ffffff;
+    }
+    100% {
+        transform: translate(-50%, 0);
+        text-shadow: 0 0 20px #ffffff;
+    }
+}
+
+@keyframes blink {
+    70% {
+        opacity: 1;
+    }
+    79% {
+        opacity: 0;
+    }
+    81% {
+        opacity: 1;
+    }
+    82% {
+        opacity: 0;
+    }
+    83% {
+        opacity: 1;
+    }
+    92% {
+        opacity: 0;
+    }
+    92.5% {
+        opacity: 1;
+    }
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+@keyframes cookiemonsta {
+    50% {
+        top: -10px;
+    }
+}

@@ -1,0 +1,60 @@
+/*!
+Theme Name: Smacznego Blog
+Theme URI: github
+Author: Chomikoo
+
+Version:  1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE     
+Text Domain: 
+Tags: Blog, Cooking, Food
+*/
+ 
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "helpers/normalize";
+
+/* --------------------------------------------------------------*/
+// # CSS VENDORS       
+// @import "vendor/slick";
+
+
+
+ 
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "helpers/variables";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+// @import "helpers/mixins";    
+@import "layout/breakpoints"; 
+@import "layout/grid";
+
+/*--------------------------------------------------------------
+# Fonts 
+--------------------------------------------------------------*/
+@import "helpers/fonts";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import 'layout/wordpress';  
+
+@import 'layout/general';  
+@import 'layout/buttons';  
+ 
+@import 'pages/nav';  
+@import 'pages/header';  
+
+@import 'pages/index';  
+@import 'pages/footer';  
+@import 'pages/cookienot';  
+    
+@import 'layout/animations';  
+
+                

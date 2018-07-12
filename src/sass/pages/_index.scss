@@ -1,0 +1,227 @@
+//////////////////
+// INDEX
+//////////////////
+/*--------------------------------------ABOUT----------------------------------------*/
+
+.about {
+    &__skills {
+        text-align: center;
+        margin-bottom: -3rem;
+    }
+    &__skill {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 30px;
+        path {
+            fill: transparent;
+            stroke: $black;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear forwards;
+        }
+    }
+    &__text {
+        margin-bottom: 3rem;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+        p {
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
+/*-----------------------------------------POROJCTS------------------------------------------*/
+
+.portfolio {
+    &__project {
+        display: flex;
+        flex-direction: column;
+        background-color: #173563;
+        border-radius: 10px;
+        width: 80%;
+        overflow: hidden;
+        margin: 10px auto 35px auto;
+        position: relative;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            border-radius: 100px / 10px;
+        }
+        &:after {
+            right: 10px;
+            left: auto;
+            transform: skew(8deg) rotate(3deg);
+        }
+    }
+    &__img {
+        min-height: 300px;
+        width: 100%;
+        flex-basis: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center top;
+        transition: 2s ease-in-out;
+        &:hover {
+            background-position: center bottom;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        width: 100%;
+        flex-basis: 100%;
+        padding: 25px;
+        color: $white;
+    }
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1.5px;
+    }
+    &__category {
+        a {
+            color: $white;
+            font-size: 0.75rem;
+        }
+    }
+    .technology-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+        &__element {
+            background-color: $c-black-tag;
+            border-radius: 5px;
+            padding: 5px 7px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        a {
+            position: relative;
+            color: $white;
+            font-family: $f-roboto;
+            letter-spacing: 1.2px;
+            border: 1px solid $white;
+            padding: 5px 10px;
+            transition: 0.5s ease-in-out;
+            min-width: 110px;
+            text-align: center;
+            span {
+                margin-right: 10px;
+            }
+            &:hover {
+                color: $black;
+                background: $white;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------------------CONTACT-----------------------------------*/
+
+.contact {
+    background-color: #040E18;
+    color: $white;
+    text-align: center;
+    a {
+        color: $white;
+        font-size: 1.5rem;
+    }
+    &__box {
+        margin-bottom: 50px;
+        &:hover {
+            .fa-phone {
+                animation: shake 1s infinite;
+            }
+        }
+        .contact__icon {
+            margin-right: 1rem;
+        }
+    }
+    &__email {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 1.5rem auto;
+        max-width: 10rem;
+        .btn--ghost {
+            padding: 5px;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .about {
+        .col-l {
+            padding-right: 20px;
+        }
+        &__skills {
+            margin-bottom: 1rem;
+        }
+        &__skill {
+            text-align: center;
+            margin-bottom: 0;
+            padding: 15px;
+        }
+        &__text {
+            margin-bottom: 3rem;
+            p {
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+    .portfolio {
+        &__project {
+            flex-direction: row;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            margin: 10px auto 75px auto;
+            &:hover {
+                transform: scale(1.1, 1.1);
+            }
+        }
+        &__img {
+            width: 55%;
+            flex-basis: 55%;
+            min-height: 450px;
+        }
+        &__info {
+            width: 45%;
+            flex-basis: 45%;
+        }
+    }
+}
+
+@include breakpoint(xl) {
+    .portfolio {
+        &__project {
+            width: 100%;
+        }
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__category {
+            a {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

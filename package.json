@@ -1,0 +1,40 @@
+{
+  "name": "portfoliowp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chomikoo/portfoliowp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chomikoo/portfoliowp/issues"
+  },
+  "homepage": "https://github.com/chomikoo/portfoliowp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel-minify": "^0.4.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.3.1",
+    "run-sequence": "^2.2.1",
+    "uglify-js": "^3.4.3"
+  },
+  "dependencies": {
+    "scrollreveal": "^3.4.0"
+  }
+}

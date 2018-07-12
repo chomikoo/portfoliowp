@@ -1,0 +1,59 @@
+/*---------------------------------------HEADER-------------------------------*/
+
+header {
+    background-image: radial-gradient(ellipse farthest-corner at center, #173563 0%, #091426 100%);
+    background-color: #0b192f;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.hero {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    
+    .arrow-down {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: pulse 2s infinite;
+        // color: $white;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 30px;
+    }
+}
+
+
+@include breakpoint(md) {
+
+    .hero {
+        flex-direction: column;    
+        .headers {
+            margin-bottom: 50px;
+        }
+        .arrow-down {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: pulse 2s infinite;
+            // color: $white;
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 30px;
+        }
+    }
+
+}

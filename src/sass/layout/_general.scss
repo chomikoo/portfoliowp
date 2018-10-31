@@ -13,30 +13,31 @@ section {
 }
 
 body::-webkit-scrollbar {
-    width: 1em;
+	width: 1em;
 }
 
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 4px #18263c;
+	-webkit-box-shadow: inset 0 0 4px #18263c;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #121f34;
+	background-color: #121f34;
 }
 
 .page-title {
-    font-size: 2.5rem;
-    color: $white;
-    font-weight: $light;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+	font-size: 2.5rem;
+	color: $white;
+	font-weight: $light;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 }
+
 .sub-title {
-    font-size: 1.6rem;
-    line-height: 2.5rem;
-    letter-spacing: 1px;
-    font-weight: $light;
-    text-transform: uppercase;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+	letter-spacing: 1px;
+	font-weight: $light;
+	text-transform: uppercase;
 }
 
 .section-title {
@@ -45,7 +46,7 @@ body::-webkit-scrollbar-thumb {
 	letter-spacing: 2px;
 
 	&::first-letter {
-	    border-bottom: 2px solid #f64747;
+		border-bottom: 2px solid #f64747;
 	}
 }
 
@@ -63,7 +64,12 @@ img {
 	height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin: 0;
 	padding: 0;
 	line-height: 100%;
@@ -75,27 +81,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.text-red {
+.text-blink {
 	color: $c-red;
 	opacity: 1;
-	&:hover {
-		animation: blink linear 1s ;
-		text-shadow: 0 0 10px $white, 
-					0 0 20px $white, 
-					0 0 30px $c-red, 
-					0 0 40px $c-red, 
-					0 0 70px $c-red, 
-					0 0 80px $c-red, 
-					0 0 100px $c-red, 
-					0 0 150px $c-red;
-	}
+	animation: blink linear 2s infinite;
+	text-shadow: 0 0 10px $white,
+		0 0 20px $white,
+		0 0 30px $c-red,
+		0 0 40px $c-red,
+		0 0 70px $c-red,
+		0 0 80px $c-red,
+		0 0 100px $c-red,
+		0 0 150px $c-red;
 }
 
 
 .btn {
-
+	display: inline-block;
+	border: none;
+	background: none;
+	
 	&--download {
-		display: inline-block;
 		padding: 15px 45px;
 		color: $c-grey-btn;
 		background-image: linear-gradient(45deg, #aaa 50%, transparent 50%);
@@ -103,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 		background-size: 300%;
 		border: 5px solid $c-grey-btn;
 		transition: 0.5s;
+
 		&:hover {
 			background-position: 0 100%;
 			color: $white;
@@ -113,11 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 		border: 2px solid $black;
 		background: transparent;
 		transition: 0.5s ease-in-out;
+
 		&:hover {
 			color: $black;
 			background-color: $white;
 			border: 2px solid $black;
-			
+
 		}
 	}
 
@@ -130,8 +138,15 @@ h1, h2, h3, h4, h5, h6 {
 		width: 60px;
 		height: 45px;
 
+		border: none;
+		background: none;
+
 		transition: .5s ease-in-out;
 		cursor: pointer;
+
+		&:hover, &:focus {
+			outline: none;
+		}
 
 		.bar {
 			$hamburger_spacer: 18px;
@@ -148,13 +163,15 @@ h1, h2, h3, h4, h5, h6 {
 
 			transition: .25s ease-in-out;
 
-			&:nth-of-type(1){
+			&:nth-of-type(1) {
 				top: 0;
 			}
-			&:nth-of-type(2){
+
+			&:nth-of-type(2) {
 				top: $hamburger_spacer;
 			}
-			&:nth-of-type(3){
+
+			&:nth-of-type(3) {
 				top: $hamburger_spacer * 2;
 			}
 		}
@@ -162,35 +179,40 @@ h1, h2, h3, h4, h5, h6 {
 		&.active {
 			.bar {
 				transform-origin: left center;
-				&:nth-of-type(1){
+
+				&:nth-of-type(1) {
 					transform: rotate(45deg);
 					top: -3px;
 					left: 8px;
 				}
-				&:nth-of-type(2){
+
+				&:nth-of-type(2) {
 					opacity: 0;
 					// top: 18px;
 				}
-				&:nth-of-type(3){
+
+				&:nth-of-type(3) {
 					transform: rotate(-45deg);
 					top: 39px;
 					left: 8px;
 				}
 			}
 		}
-		
+
 
 
 	}
 }
 
 @include breakpoint(md) {
-	section{
+	section {
 		padding: 5rem 0;
-	} 
+	}
+
 	.page-title {
 		font-size: 3.5rem;
 	}
+
 	.sub-title {
 		font-size: 2.5rem;
 	}

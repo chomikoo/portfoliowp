@@ -78,20 +78,20 @@
 <body <?php body_class(); ?>>
 
 
-	<header id="header" class="header">
+	<header id="home" class="header">
 		<div class="hero ">
 			<div class="headers">
 				<h1 class="page-title">Front-End Developer</h1>
 				<h2 class="sub-title">Szymon
-					<span class="text-red">Trzepla</span>
+					<span class="text-blink">Trzepla</span>
 					</h3>
 			</div>
 
-			<a class="btn--hamburger">
+			<button class="btn--hamburger">
 				<span class="bar"></span>
 				<span class="bar"></span>
 				<span class="bar"></span>
-			</a>
+			</button>
 
 			<nav id="top_nav" class="top_nav ">
 

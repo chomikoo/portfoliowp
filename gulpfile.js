@@ -136,7 +136,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 
  return gulp.src([
-      jsSRC + 'jquery.js',
+      jsSRC + '/vendors/jquery.js',
       jsSRC + '/vendors/scrollreveal.js',
       jsMain
     ])
@@ -203,17 +203,3 @@ gulp.task('build', function (callback) {
     callback)
 });
 
- // gulp.task( 'default', ['styles', 'scripts', 'images', 'fonts'], function() {
- //  gulp.src( jsDIST + 'admin.min.js' )
- //    .pipe( notify({ message: 'Assets Compiled!' }) );
- // });
-
- // gulp.task( 'watch', ['default', 'browser-sync'], function() {
- //  gulp.watch( phpWatch, reload );
- //  gulp.watch( styleWatch, [ 'styles' ] );
- //  gulp.watch( jsWatch, [ 'scripts', reload ] );
- //  gulp.watch( imgWatch, [ 'images' ] );
- //  gulp.watch( fontsWatch, [ 'fonts' ] );
- //  gulp.src( jsDIST + 'admin.min.js' )
- //    .pipe( notify({ message: 'Gulp is Watching, Happy Coding!' }) );
- // });

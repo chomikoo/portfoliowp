@@ -1,12 +1,10 @@
 ![AwwPlanty Header](screenshot.png)
 # Project Name
-> My personal portfolio 
+> My personal portfolio - twojdev.pl
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-
-
 
 ## General info
 Practicing in PSD2HTML 
@@ -17,4 +15,6 @@ Practicing in PSD2HTML
 * WordPress
 * JS
 * Gulp
+
+http://twojdev.pl/
 
